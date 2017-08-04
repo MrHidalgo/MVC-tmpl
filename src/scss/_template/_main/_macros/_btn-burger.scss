@@ -1,0 +1,99 @@
+@import "../../../_mixin/mixin";
+@import "../../../_variable/variable";
+///
+/// ADDITIONAL VARIABLE
+///
+$width-btn : 30px;
+$height-btn : 22px;
+///
+/// MAIN
+///
+.btn-menu {
+	display: block;
+	position: relative;
+	margin: {
+		top: (55px - $height-btn) / 2;
+	};
+	@include mixinDimensions($width-btn, $height-btn);
+
+
+	&--wrap {
+		display: inline-block;
+		vertical-align: top;
+		@include mixinDimensions((15px + 15px + $width-btn), 55px);
+		padding: {
+			left: 15px;
+		};
+		transition: background .3s ease-in-out, margin-left .45s ease-in-out;
+
+
+		&.active {
+			position: relative;
+			z-index: 110;
+			margin-left: 350px;
+			background-color: $c-white;
+			box-shadow: 1px 0 3px 0 rgba(0,0,0,0.25);
+			transition: background .3s ease-in-out, margin-left .35s ease-in-out;
+		}
+	}
+
+
+	&.active {
+		.btn-menu__line {
+			width: $width-btn;
+			background-color: $c-blueGrey900;
+
+
+			&-0,
+			&-2 {
+				top: 10px;
+
+				&.btn-menu__line {
+					transition: transform .5s ease-in-out;
+				}
+			}
+
+			&-0 {
+				transform: rotate(-135deg);
+			}
+			&-1 {
+				opacity: 0;
+			}
+			&-2 {
+				transform: rotate(135deg);
+			}
+		}
+	}
+
+
+	&:hover {
+		.btn-menu__line {
+			width: $w-all;
+			transition: width .3s ease-in-out;
+		}
+	}
+
+
+	&__line {
+		position: absolute;
+		left: 0;
+		@include mixinDimensions(32px, 2px);
+		background-color: $c-blueGrey900;
+		transition: width .3s ease-in-out;
+
+
+		&-0 {
+			width: $w-all;
+			top: 0;
+		}
+		&-1 {
+			width: 55%;
+			top: 50%;
+			margin-top: -1px;
+		}
+		&-2 {
+			width: 90%;
+			bottom: 0;
+		}
+	}
+}

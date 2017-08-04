@@ -1,0 +1,10 @@
+mixin boardTitleText(title, text)
+    h1.board__title!= title
+    p.board__text!= text
+
+
+mixin boardImageContainer(className)
+    div.board__image-wrap(class= "" + className)
+        i(class="board__image board__image_bg")
+        i(class="board__image board__image_man")
+        i(class="board__image board__image_layer")

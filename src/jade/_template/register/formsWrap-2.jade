@@ -1,0 +1,35 @@
+
+.forms__wrap.forms__wrap-2
+
+    .form__group.form__group_register()
+        label.form__label(for!= "email")!= "Email: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "email"
+                id!= "email"
+                placeholder!= "Your email"
+            )
+
+    .form__group.form__group_register()
+        label.form__label(for!= "create_password")!= "Create password: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "create_password"
+                id!= "create_password"
+                placeholder!= "Create a password"
+            )
+
+    .form__group.form__group_register()
+        label.form__label(for!= "confirm_password")!= "Confirm password: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "confirm_password"
+                id!= "confirm_password"
+                placeholder!= "Confirm your password"
+            )

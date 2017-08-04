@@ -1,0 +1,122 @@
+@import "../../_mixin/mixin";
+@import "../../_variable/variable";
+///
+/// ADDITIONAL STYLE
+///
+
+///
+/// ADDITIONAL VARIABLE
+///
+$menuWidth: 350px;
+///
+/// MAIN STYLE
+///
+.menu {
+	position: absolute;
+	z-index: 100;
+	left: -$menuWidth;
+	top: 0;
+	@include mixinDimensions($menuWidth, 100vh);
+	background-color: $c-white;
+	box-shadow: 1px 0 3px 0 rgba(0,0,0,0.25);
+	transition: left .45s ease-in-out;
+
+
+	&.active {
+		left: 0;
+		transition: left .35s ease-in-out;
+	}
+
+
+	&__top {
+		height: 55px;
+	}
+
+
+	&__center {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: calc(100% - (55px + 70px));
+		overflow-y: auto;
+		padding: {
+			left: 20px;
+			right: 20px;
+		};
+	}
+
+
+	&__bottom {
+		height: 70px;
+		border: {
+			top: 1px solid $c-grey400;
+		}
+	}
+
+
+	&__btn {
+		display: block;
+		height: 55px;
+		line-height: 55px;
+		border: {
+			bottom: 1px solid $c-grey400;
+		};
+		color: $c-blueGrey800;
+		transition: background-color 0.3s ease-in-out;
+
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+
+		&:hover {
+			background-color: $c-blueGrey50;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+
+		&-icon {
+			margin: {
+				right: 10px;
+				left: 10px;
+			}
+		}
+	}
+
+
+	&__copyright {
+		margin: {
+			top: 7px;
+			bottom: 7px;
+		};
+		font-size: 12px;
+		color: $c-blueGrey800;
+		text-align: center;
+	}
+
+
+	&__social {
+		display: inline-block;
+		vertical-align: top;
+		@include mixinDimensions(30px);
+		line-height: 28px;
+		border-radius: $w-all;
+		background-color: return-value(gray, 800);
+		color: $c-white;
+		font-size: 12px;
+
+
+		&:nth-child(2) {
+			margin: {
+				left: 10px;
+				right: 10px;
+			};
+		}
+
+
+		&-wrap {
+			text-align: center;
+		}
+	}
+}

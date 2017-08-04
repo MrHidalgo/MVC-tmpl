@@ -1,0 +1,11 @@
+-
+    var arrCircleTitle = ["Personal", "Education", "Account Setup"];
+    var arrCircleStep = ["1", "2", "3"];
+
+.shape__circle-wrap
+
+    each val, idx in arrCircleTitle
+        .shape__circle-block(class!= (idx === 0) ? "active" : "")
+            .shape__circle
+                != arrCircleStep[idx]
+            p.shape__circle-title!= val

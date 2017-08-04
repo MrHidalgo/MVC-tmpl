@@ -1,0 +1,90 @@
+///
+/// ADDITIONAL FILES
+///
+@import "./_mixin/mixin";
+@import "./_variable/variable";
+///
+/// LOGOTYPE
+///
+.logotype {
+	&_unlogged {
+		display: block;
+		@include mixinDimensions(98px, 75px);
+		margin: {
+			top: -100px;
+			left: auto;
+			right: auto;
+			bottom: 20px;
+		}
+	;
+	}
+}
+
+///
+/// FORM
+///
+.login {
+	//display: none;
+}
+
+.forgot {
+	display: none;
+}
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+
+	&.flipOutX,
+	&.flipOutY {
+		animation-duration: .35s;
+	}
+}
+
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+	40% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		animation-timing-function: ease-in;
+	}
+	60% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+	80% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+	to {
+		transform: perspective(400px);
+	}
+}
+
+@keyframes flipOutY {
+	from {
+		transform: perspective(400px);
+	}
+	30% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+		opacity: 1;
+	}
+	to {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		opacity: 0;
+	}
+}
+
+.flipOutY {
+	display: none;
+	backface-visibility: visible !important;
+	animation-name: flipOutY;
+}
+
+.flipInY {
+	display: block;
+	backface-visibility: visible !important;
+	animation-name: flipInY;
+}

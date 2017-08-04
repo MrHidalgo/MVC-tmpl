@@ -1,0 +1,48 @@
+-
+    var menuArrItem = [
+        "About",
+        "Contacts",
+        "Privacy"
+    ];
+    var menuArrIcon = [
+        "info-circle",
+        "address-book",
+        "user-secret"
+    ];
+    var menuArrHref = [
+        "/about",
+        "javascript:void(0);",
+        "/privacy"
+    ];
+    var menuArrSocialIcon = [
+        "facebook",
+        "google-plus",
+        "twitter"
+    ];
+
+// LANGUAGE
+#menu.menu
+
+    .menu__top
+
+    .menu__center
+        each val, idx in menuArrItem
+            a(
+                href!= menuArrHref[idx]
+                title= ""
+                class="menu__btn"
+            )
+                i.menu__btn-icon.fa(class="fa-" + menuArrIcon[idx])
+                != val
+
+    .menu__bottom
+        p.menu__copyright!= "© ExpertCollege 2017"
+
+        .menu__social-wrap
+            each val in menuArrSocialIcon
+                a(
+                    href="javascript:void(0);"
+                    title=""
+                    class="menu__social"
+                )
+                    i.menu__social-icon.fa(class="fa-" + val)

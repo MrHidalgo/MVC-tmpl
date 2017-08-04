@@ -1,0 +1,28 @@
+.container-fluid(
+    ng-controller="registerCtrl as register"
+)
+    // CONFIRM TMPL
+    // ========================================
+    img(
+        src="./image/logotype.png"
+        title=""
+        alt=""
+        class="logotype logotype_unlogged"
+    )
+
+    .shape.shape_register
+
+        +shapeBadge("User Registration")
+
+        include circle
+
+        form.forms()
+            include formsWrap-0
+
+            include formsWrap-1
+
+            include formsWrap-2
+
+        include btn
+
+    +shapeAdditionalLink("Just remembered? ", "/login", "shape__signIn-js" , "Sign In")

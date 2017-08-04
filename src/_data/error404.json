@@ -1,0 +1,13 @@
+{
+
+  "error" : {
+    "title" : "Oh-no!",
+    "text" : "Something went wrong at our end.<br>Don't worry, it's not you - it's us. Sorry about that."
+  },
+
+  "404" : {
+    "title" : "Whoops!",
+    "text" : "Unfortunately the page you were looking for could not be found.<br>It may be temporarily unavailable, moved or no longer exist."
+  }
+
+}

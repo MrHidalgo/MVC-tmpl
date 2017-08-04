@@ -1,0 +1,30 @@
+@import "../../_mixin/mixin";
+@import "../../_variable/variable";
+///
+/// MAIN STYLE
+///
+body {
+
+	&.background {
+		background: url("../image/bg.jpg") no-repeat center/cover fixed;
+
+
+		&_404 {
+			background: url("../image/bg-404.jpg") no-repeat center/cover fixed;
+		}
+		&_error {
+			background: url("../image/bg-error.jpg") no-repeat center/cover fixed;
+		}
+	}
+
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		@include mixinDimensions($w-all);
+		background-color: rgba(255, 255, 255, 0.65);
+	}
+}

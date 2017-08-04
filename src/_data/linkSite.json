@@ -1,0 +1,47 @@
+{
+  "styleLinkMain" : [
+    "./vendor/css/font-awesome.min.css",
+    "./style/common.min.css"
+  ],
+  "scriptLinkCore" : [
+    "./vendor/js/jquery-3.2.1.min.js",
+    "./vendor/js/angular.min.js",
+    "./script/kendo.min.js"
+  ],
+  "scriptLinkMain" : [
+    "./script/main.min.js"
+  ],
+
+
+  "styleLinkLogin" : [
+    "style/unlogged.min.css"
+  ],
+  "scriptLinkLogin" : [
+    "./script/login.min.js"
+  ],
+
+
+  "styleLinkRegister" : [
+    "style/unlogged.min.css",
+    "style/kendo.min.css"
+  ],
+  "scriptLinkRegister" : [
+    "./script/register.min.js"
+  ],
+
+
+  "styleLinkConfirm" : [
+    "style/unlogged.min.css"
+  ],
+  "scriptLinkConfirm" : [
+    "./script/confirm.min.js"
+  ],
+
+
+  "styleLink404" : [
+    "./style/error.min.css"
+  ],
+  "styleLinkError" : [
+    "./style/error.min.css"
+  ]
+}

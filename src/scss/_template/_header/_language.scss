@@ -1,0 +1,129 @@
+@import "../../_mixin/mixin";
+@import "../../_variable/variable";
+@import "../../_variable/sprite";
+///
+/// ADDITIONAL STYLE
+///
+
+///
+/// MAIN STYLE
+///
+.language {
+	position: relative;
+	float: right;
+	padding-right: 15px;
+	margin-top: (55px - 32px) / 2;
+
+
+	&_en {
+		.language__link {
+			.language__btn-flag {
+				@include retina-sprite($sp-i-flag-gb-group);
+			}
+		}
+	}
+	&_nl {
+		.language__link {
+			.language__btn-flag {
+				@include retina-sprite($sp-i-flag-nl-group);
+			}
+		}
+	}
+
+	&__btn {
+		&-flag,
+		&-corner {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-flag {
+			&_en {
+				@include retina-sprite($sp-i-flag-gb-group);
+			}
+			&_nl {
+				@include retina-sprite($sp-i-flag-nl-group);
+			}
+		}
+		&-corner {
+			margin-left: 5px;
+		}
+	}
+
+	&__drop {
+		display: none;
+		position: absolute;
+		z-index: 25;
+		top: 45px;
+		right: 15px;
+		min-width: 100px;
+		text-align: left;
+		border-radius: 2px;
+		background-color: $c-white;
+		@include mixinBoxShadow(z-depth-1);
+
+		&.active {
+			display: block;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			@include mixinDimensions(20px);
+			top: -10px;
+			right: 18px;
+			background-color: $c-white;
+			transform: rotate(45deg);
+			@include mixinBoxShadow(z-depth-1);
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include mixinDimensions($w-all);
+			background-color: $c-white;
+		}
+
+		&-wrap {
+			position: relative;
+			z-index: 10;
+		}
+
+		.language__btn {
+			display: block;
+			white-space: nowrap;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 14px;
+			border-top: 1px solid rgba(0, 0, 0, 0.075);
+			transition-property: background-color, color;
+			transition: .3s ease-in-out;
+
+			&-flag {
+				margin-right: 15px;
+			}
+
+			&:hover {
+				background-color: #ECEFF1;
+				transition-property: background-color, color;
+				transition: .3s ease-in-out;
+			}
+		}
+	}
+
+	&__title {
+		white-space: nowrap;
+		padding: {
+			left: 15px;
+			right: 15px;
+		}
+		margin-bottom: 0;
+		height: 30px;
+		line-height: 30px;
+		font-size: 12px;
+	}
+}

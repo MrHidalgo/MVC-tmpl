@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Eportfolio" class="js">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Eportfolio | Registration Confirmation</title>
+    <link rel="icon" type="image/png" href="./image/favicon.png"/>
+    <link href="./vendor/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./style/common.min.css" rel="stylesheet"/>
+    <link href="style/unlogged.min.css" rel="stylesheet"/>
+  </head>
+  <body class="background">
+    <div class="body_overlay"></div>
+    <!-- HEADER-->
+    <div id="header" class="header clearfix header__unlogged">
+      <!-- BTN MENU BURGER-->
+      <div class="btn-menu--wrap"><a href="javascript:void(0);" title="" class="btn-menu btn-menu_js "><span class="btn-menu__line btn-menu__line-0"></span><span class="btn-menu__line btn-menu__line-1"></span><span class="btn-menu__line btn-menu__line-2"></span></a>
+      </div>
+      <!--include logotype-->
+      <!--include profile-->
+      <!-- LANGUAGE-->
+      <div id="language" class="language language_en"><a href="javascript:void(0);" title="" class="language__link language__btn language-js"><i class="language__btn-flag"></i><i class="language__btn-corner fa fa-caret-down"></i></a>
+        <div class="language__drop">
+          <div class="language__drop-wrap">
+            <p class="language__title">Choose language:</p><a href="javascript:void(0);" title="" class="language__btn"><i class="language__btn-flag language__btn-flag_en"></i>English</a><a href="javascript:void(0);" title="" class="language__btn"><i class="language__btn-flag language__btn-flag_nl"></i>Nederlands</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MENU-->
+    <!-- LANGUAGE-->
+    <div id="menu" class="menu">
+      <div class="menu__top"></div>
+      <div class="menu__center"><a href="/about" title="" class="menu__btn"><i class="menu__btn-icon fa fa-info-circle"></i>About</a><a href="javascript:void(0);" title="" class="menu__btn"><i class="menu__btn-icon fa fa-address-book"></i>Contacts</a><a href="/privacy" title="" class="menu__btn"><i class="menu__btn-icon fa fa-user-secret"></i>Privacy</a>
+      </div>
+      <div class="menu__bottom">
+        <p class="menu__copyright">© ExpertCollege 2017</p>
+        <div class="menu__social-wrap"><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-facebook"></i></a><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-google-plus"></i></a><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- MAIN-->
+    <div id="main" class="main">
+      <div ng-controller="confirmCtrl" class="container-fluid">
+        <!-- CONFIRM TMPL-->
+        <!-- ========================================--><img src="./image/logotype.png" title="" alt="" class="logotype logotype_unlogged">
+        <div class="shape shape_register">
+          <div class="shape__badge">
+            <p class="shape__badge-title">Registration Confirmation</p><i class="shape__badge-corner"></i>
+          </div>
+          <form class="forms">
+            <p class="shape__title"><strong>Dear,</strong> Name Surname TitleName</p>
+            <hr class="shape__line">
+            <div class="form__group form__group_icon">
+              <label for="email" class="form__label">Please confirm email:</label>
+              <div class="form__field">
+                <input type="email" name="email" id="email" placeholder="" disabled value="test.test@test.test" class="form__input"><i class="form__icon fa fa-envelope"></i>
+              </div>
+            </div>
+            <hr class="shape__line">
+            <div class="form__group form__group_checkbox">
+              <input type="checkbox" name="checkbox0" id="checkbox0" class="form__checkbox">
+              <label for="checkbox0"><i class="form__checkbox-icon"></i><span class="form__checkbox-text">I hereby declare to have read and accept <a href='javascript:void(0);' class='form__checkbox-link'>the general conditions and terms</a> for using My Expertfolio</span></label>
+            </div>
+            <div class="form__group form__group_checkbox">
+              <input type="checkbox" name="checkbox1" id="checkbox1" class="form__checkbox">
+              <label for="checkbox1"><i class="form__checkbox-icon"></i><span class="form__checkbox-text">I hereby declare to have read and to accept the <a href='javascript:void(0);' class='form__checkbox-link'>patient privacy rules</a> of Expertfolio</span></label>
+            </div>
+          </form>
+          <div class="shape__btn-wrap shape__btn-wrap_two">
+            <button type="button" class="shape__btn shape__btn_danger">Cancel Registration</button>
+            <button type="button" class="shape__btn shape__btn_success">Confirm Registration</button>
+          </div>
+        </div>
+        <div class="shape__link-wrap">
+          <p class="shape__link">Just remembered? <a href="/login" title="" class="shape__link-btn shape__signIn-js">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script/main.min.js"></script>
+  <script src="./script/confirm.min.js"></script>
+</html>

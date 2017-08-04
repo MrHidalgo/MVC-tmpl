@@ -1,0 +1,26 @@
+@import "../../_mixin/mixin";
+@import "../../_variable/variable";
+///
+/// ADDITIONAL STYLE
+///
+@import "../_main/_macros/btn-burger";
+@import "logotype";
+@import "language";
+@import "profile";
+///
+/// MAIN STYLE
+///
+.header {
+	position: relative;
+	height: 55px;
+	border: {
+		bottom: 1px solid $c-blueGrey50;
+	}
+	background-color: $c-white;
+
+
+	&__unlogged {
+		background-color: transparent;
+		border-bottom: none;
+	}
+}

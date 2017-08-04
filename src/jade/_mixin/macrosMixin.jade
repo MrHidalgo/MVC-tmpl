@@ -1,0 +1,64 @@
+//-
+//- SHAPE BADGE - FORMS NAME ["User Login", "Register" & etc]
+//- ========================================
+mixin shapeBadge(name)
+    .shape__badge
+        p.shape__badge-title!= name
+        i.shape__badge-corner
+
+//-
+//- SHAPE LINK ["Don’t have an account? Sign Up", "Just remembered? Sign In" & etc]
+//- ========================================
+mixin shapeAdditionalLink(normalText, hrefAttr, linkClassName, linkText)
+    .shape__link-wrap
+        p.shape__link
+            != normalText
+            a(
+                href!= hrefAttr
+                title=""
+                class="shape__link-btn " + linkClassName
+            )!= linkText
+
+//-
+//- FORM GROUP
+//- ========================================
+mixin formGroupWithLabelInput(inputType, inputName, formGroupClassName, inputId, labelTitleName, placeholderName)
+    .form__group(class!= formGroupClassName)
+        label.form__label(for!= inputId)!= labelTitleName
+        .form__field
+            input(
+                class="form__input"
+                type!= inputType
+                name!= inputName
+                id!= inputId
+                placeholder!= placeholderName
+            )
+//- ========================================
+mixin formGroupWithIconInput(inputType, inputName, formGroupClassName, inputId, iconName, placeholderName)
+    .form__group(class!= formGroupClassName)
+        .form__field
+            input(
+                class="form__input"
+                type!= inputType
+                name!= inputName
+                id!= inputId
+                placeholder!= placeholderName
+            )
+            i.form__icon(class="fa fa-" + iconName)
+//- ========================================
+mixin formGroupWithIconAndLinkInput(inputType, inputName, formGroupClassName, inputId, iconName, linkName, placeholderName)
+    .form__group(class!= formGroupClassName)
+        .form__field
+            input(
+                class="form__input"
+                type!= inputType
+                name!= inputName
+                id!= inputId
+                placeholder!= placeholderName
+            )
+            i.form__icon(class="fa fa-" + iconName)
+            a(
+                href="javascript:void(0);"
+                title!= linkName
+                class="form__link btn__forgot-js"
+            )!= linkName

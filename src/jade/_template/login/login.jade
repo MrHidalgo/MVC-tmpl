@@ -1,0 +1,78 @@
+
+.container-fluid(
+    ng-controller="loginCtrl"
+)
+    // LOGIN TMPL
+    // ========================================
+    .login.animated
+        img(
+            src="./image/logotype.png"
+            title=""
+            alt=""
+            class="logotype logotype_unlogged"
+        )
+
+        .shape.shape_login
+
+            +shapeBadge("User Login")
+
+            form.forms(action="")
+                // 3 class add - [error, warning, done]
+                +formGroupWithIconInput(
+                    "email",
+                    "email",
+                    "form__group_icon",
+                    "email__address",
+                    "envelope",
+                    "Your Email address"
+                )
+
+                +formGroupWithIconAndLinkInput(
+                    "password",
+                    "password",
+                    "form__group_icon form__group_link",
+                    "password",
+                    "unlock-alt",
+                    "Forgot password?",
+                    "Your Password")
+
+            .shape__btn-wrap.shape__btn-wrap_full
+                button(
+                    type="button",
+                    class="shape__btn shape__btn_success"
+                )!= "Sign In"
+
+        +shapeAdditionalLink("Don’t have an account? ", "/register", "shape__signUp-js" , "Sign Up")
+
+    // FORGOT TMPL
+    // ========================================
+    .forgot.animated
+        img(
+            src="./image/logotype.png"
+            title=""
+            alt=""
+            class="logotype logotype_unlogged"
+        )
+
+        .shape.shape_forgot
+
+            +shapeBadge("Forgot Password")
+
+            form.forms
+                +formGroupWithIconInput(
+                    "email",
+                    "email",
+                    "form__group_icon",
+                    "email__address",
+                    "envelope",
+                    "Your Email address",
+                    ""
+                )
+
+            .shape__btn-wrap.shape__btn-wrap_full
+                button(
+                    type="button"
+                    class="shape__btn shape__btn_success"
+                )!= "Reset my Password"
+
+        +shapeAdditionalLink("Just remembered? ", "javascript:void(0);", "btn__goToLogin-js" , "Sign In")

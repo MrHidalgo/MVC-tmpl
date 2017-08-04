@@ -1,0 +1,19 @@
+.shape__btn-wrap.shape__btn-wrap_two
+    button(
+        type="button"
+        class="shape__btn"
+        ng-click="register.previousSteps()"
+        ng-disabled="register.disabledPrevBtn()"
+    )!= "Previous"
+    button(
+        type="button"
+        class="shape__btn"
+        ng-hide="register.hideNextBtn()"
+        ng-click="register.nextSteps()"
+    )!= "Next"
+    button(
+        type="button"
+        class="shape__btn shape__btn-register shape__btn_success"
+        ng-class="register.showRegisterBtn()"
+        ng-click="register.registerBtn()"
+    )!= "Register"

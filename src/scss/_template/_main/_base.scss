@@ -1,0 +1,57 @@
+///
+/// IMPORT BLOCK
+///
+@import "../../_mixin/mixin";
+@import "../../_variable/variable";
+///
+/// BODY OVERLAY
+///
+.body {
+	&_overlay {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+
+		.open-menu & {
+			visibility: visible;
+			opacity: 1;
+			position: fixed;
+			z-index: 50;
+			top: 0;
+			left: 0;
+			@include mixinDimensions($w-all);
+			background-color: rgba(0, 0, 0, 0.55);
+			transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+		}
+	}
+}
+
+///
+/// MAIN
+///
+.main {
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(100vh - 55px);
+	padding: 15px;
+}
+
+///
+/// FONT
+///
+.k-icon.k-i-arrow-60-down {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.k-icon.k-i-arrow-60-down:before {
+	content: "\f107";
+}

@@ -1,0 +1,298 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sp-img-404-man-name: 'sp-img-404-man';
+$sp-img-404-man-x: 0px;
+$sp-img-404-man-y: 254px;
+$sp-img-404-man-offset-x: 0px;
+$sp-img-404-man-offset-y: -254px;
+$sp-img-404-man-width: 318px;
+$sp-img-404-man-height: 251px;
+$sp-img-404-man-total-width: 816px;
+$sp-img-404-man-total-height: 505px;
+$sp-img-404-man-image: '../image/sprite-error.png';
+$sp-img-404-man: (0px, 254px, 0px, -254px, 318px, 251px, 816px, 505px, '../image/sprite-error.png', 'sp-img-404-man', );
+$sp-img-404-num-name: 'sp-img-404-num';
+$sp-img-404-num-x: 429px;
+$sp-img-404-num-y: 109px;
+$sp-img-404-num-offset-x: -429px;
+$sp-img-404-num-offset-y: -109px;
+$sp-img-404-num-width: 107px;
+$sp-img-404-num-height: 52px;
+$sp-img-404-num-total-width: 816px;
+$sp-img-404-num-total-height: 505px;
+$sp-img-404-num-image: '../image/sprite-error.png';
+$sp-img-404-num: (429px, 109px, -429px, -109px, 107px, 52px, 816px, 505px, '../image/sprite-error.png', 'sp-img-404-num', );
+$sp-img-error-man-name: 'sp-img-error-man';
+$sp-img-error-man-x: 0px;
+$sp-img-error-man-y: 0px;
+$sp-img-error-man-offset-x: 0px;
+$sp-img-error-man-offset-y: 0px;
+$sp-img-error-man-width: 424px;
+$sp-img-error-man-height: 249px;
+$sp-img-error-man-total-width: 816px;
+$sp-img-error-man-total-height: 505px;
+$sp-img-error-man-image: '../image/sprite-error.png';
+$sp-img-error-man: (0px, 0px, 0px, 0px, 424px, 249px, 816px, 505px, '../image/sprite-error.png', 'sp-img-error-man', );
+$sp-img-error404-bg-layer-small-name: 'sp-img-error404-bg-layer-small';
+$sp-img-error404-bg-layer-small-x: 541px;
+$sp-img-error404-bg-layer-small-y: 129px;
+$sp-img-error404-bg-layer-small-offset-x: -541px;
+$sp-img-error404-bg-layer-small-offset-y: -129px;
+$sp-img-error404-bg-layer-small-width: 151px;
+$sp-img-error404-bg-layer-small-height: 7px;
+$sp-img-error404-bg-layer-small-total-width: 816px;
+$sp-img-error404-bg-layer-small-total-height: 505px;
+$sp-img-error404-bg-layer-small-image: '../image/sprite-error.png';
+$sp-img-error404-bg-layer-small: (541px, 129px, -541px, -129px, 151px, 7px, 816px, 505px, '../image/sprite-error.png', 'sp-img-error404-bg-layer-small', );
+$sp-img-error404-bg-layer-name: 'sp-img-error404-bg-layer';
+$sp-img-error404-bg-layer-x: 429px;
+$sp-img-error404-bg-layer-y: 72px;
+$sp-img-error404-bg-layer-offset-x: -429px;
+$sp-img-error404-bg-layer-offset-y: -72px;
+$sp-img-error404-bg-layer-width: 387px;
+$sp-img-error404-bg-layer-height: 32px;
+$sp-img-error404-bg-layer-total-width: 816px;
+$sp-img-error404-bg-layer-total-height: 505px;
+$sp-img-error404-bg-layer-image: '../image/sprite-error.png';
+$sp-img-error404-bg-layer: (429px, 72px, -429px, -72px, 387px, 32px, 816px, 505px, '../image/sprite-error.png', 'sp-img-error404-bg-layer', );
+$sp-img-error404-bg-small-name: 'sp-img-error404-bg-small';
+$sp-img-error404-bg-small-x: 541px;
+$sp-img-error404-bg-small-y: 109px;
+$sp-img-error404-bg-small-offset-x: -541px;
+$sp-img-error404-bg-small-offset-y: -109px;
+$sp-img-error404-bg-small-width: 151px;
+$sp-img-error404-bg-small-height: 15px;
+$sp-img-error404-bg-small-total-width: 816px;
+$sp-img-error404-bg-small-total-height: 505px;
+$sp-img-error404-bg-small-image: '../image/sprite-error.png';
+$sp-img-error404-bg-small: (541px, 109px, -541px, -109px, 151px, 15px, 816px, 505px, '../image/sprite-error.png', 'sp-img-error404-bg-small', );
+$sp-img-error404-bg-name: 'sp-img-error404-bg';
+$sp-img-error404-bg-x: 429px;
+$sp-img-error404-bg-y: 0px;
+$sp-img-error404-bg-offset-x: -429px;
+$sp-img-error404-bg-offset-y: 0px;
+$sp-img-error404-bg-width: 387px;
+$sp-img-error404-bg-height: 67px;
+$sp-img-error404-bg-total-width: 816px;
+$sp-img-error404-bg-total-height: 505px;
+$sp-img-error404-bg-image: '../image/sprite-error.png';
+$sp-img-error404-bg: (429px, 0px, -429px, 0px, 387px, 67px, 816px, 505px, '../image/sprite-error.png', 'sp-img-error404-bg', );
+$sp-img-404-man-2x-name: 'sp-img-404-man@2x';
+$sp-img-404-man-2x-x: 0px;
+$sp-img-404-man-2x-y: 508px;
+$sp-img-404-man-2x-offset-x: 0px;
+$sp-img-404-man-2x-offset-y: -508px;
+$sp-img-404-man-2x-width: 636px;
+$sp-img-404-man-2x-height: 502px;
+$sp-img-404-man-2x-total-width: 1632px;
+$sp-img-404-man-2x-total-height: 1010px;
+$sp-img-404-man-2x-image: '../image/sprite-error@2x.png';
+$sp-img-404-man-2x: (0px, 508px, 0px, -508px, 636px, 502px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-404-man@2x', );
+$sp-img-404-num-2x-name: 'sp-img-404-num@2x';
+$sp-img-404-num-2x-x: 858px;
+$sp-img-404-num-2x-y: 218px;
+$sp-img-404-num-2x-offset-x: -858px;
+$sp-img-404-num-2x-offset-y: -218px;
+$sp-img-404-num-2x-width: 214px;
+$sp-img-404-num-2x-height: 104px;
+$sp-img-404-num-2x-total-width: 1632px;
+$sp-img-404-num-2x-total-height: 1010px;
+$sp-img-404-num-2x-image: '../image/sprite-error@2x.png';
+$sp-img-404-num-2x: (858px, 218px, -858px, -218px, 214px, 104px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-404-num@2x', );
+$sp-img-error-man-2x-name: 'sp-img-error-man@2x';
+$sp-img-error-man-2x-x: 0px;
+$sp-img-error-man-2x-y: 0px;
+$sp-img-error-man-2x-offset-x: 0px;
+$sp-img-error-man-2x-offset-y: 0px;
+$sp-img-error-man-2x-width: 848px;
+$sp-img-error-man-2x-height: 498px;
+$sp-img-error-man-2x-total-width: 1632px;
+$sp-img-error-man-2x-total-height: 1010px;
+$sp-img-error-man-2x-image: '../image/sprite-error@2x.png';
+$sp-img-error-man-2x: (0px, 0px, 0px, 0px, 848px, 498px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-error-man@2x', );
+$sp-img-error404-bg-layer-small-2x-name: 'sp-img-error404-bg-layer-small@2x';
+$sp-img-error404-bg-layer-small-2x-x: 1082px;
+$sp-img-error404-bg-layer-small-2x-y: 258px;
+$sp-img-error404-bg-layer-small-2x-offset-x: -1082px;
+$sp-img-error404-bg-layer-small-2x-offset-y: -258px;
+$sp-img-error404-bg-layer-small-2x-width: 302px;
+$sp-img-error404-bg-layer-small-2x-height: 14px;
+$sp-img-error404-bg-layer-small-2x-total-width: 1632px;
+$sp-img-error404-bg-layer-small-2x-total-height: 1010px;
+$sp-img-error404-bg-layer-small-2x-image: '../image/sprite-error@2x.png';
+$sp-img-error404-bg-layer-small-2x: (1082px, 258px, -1082px, -258px, 302px, 14px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-error404-bg-layer-small@2x', );
+$sp-img-error404-bg-layer-2x-name: 'sp-img-error404-bg-layer@2x';
+$sp-img-error404-bg-layer-2x-x: 858px;
+$sp-img-error404-bg-layer-2x-y: 144px;
+$sp-img-error404-bg-layer-2x-offset-x: -858px;
+$sp-img-error404-bg-layer-2x-offset-y: -144px;
+$sp-img-error404-bg-layer-2x-width: 774px;
+$sp-img-error404-bg-layer-2x-height: 64px;
+$sp-img-error404-bg-layer-2x-total-width: 1632px;
+$sp-img-error404-bg-layer-2x-total-height: 1010px;
+$sp-img-error404-bg-layer-2x-image: '../image/sprite-error@2x.png';
+$sp-img-error404-bg-layer-2x: (858px, 144px, -858px, -144px, 774px, 64px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-error404-bg-layer@2x', );
+$sp-img-error404-bg-small-2x-name: 'sp-img-error404-bg-small@2x';
+$sp-img-error404-bg-small-2x-x: 1082px;
+$sp-img-error404-bg-small-2x-y: 218px;
+$sp-img-error404-bg-small-2x-offset-x: -1082px;
+$sp-img-error404-bg-small-2x-offset-y: -218px;
+$sp-img-error404-bg-small-2x-width: 302px;
+$sp-img-error404-bg-small-2x-height: 30px;
+$sp-img-error404-bg-small-2x-total-width: 1632px;
+$sp-img-error404-bg-small-2x-total-height: 1010px;
+$sp-img-error404-bg-small-2x-image: '../image/sprite-error@2x.png';
+$sp-img-error404-bg-small-2x: (1082px, 218px, -1082px, -218px, 302px, 30px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-error404-bg-small@2x', );
+$sp-img-error404-bg-2x-name: 'sp-img-error404-bg@2x';
+$sp-img-error404-bg-2x-x: 858px;
+$sp-img-error404-bg-2x-y: 0px;
+$sp-img-error404-bg-2x-offset-x: -858px;
+$sp-img-error404-bg-2x-offset-y: 0px;
+$sp-img-error404-bg-2x-width: 774px;
+$sp-img-error404-bg-2x-height: 134px;
+$sp-img-error404-bg-2x-total-width: 1632px;
+$sp-img-error404-bg-2x-total-height: 1010px;
+$sp-img-error404-bg-2x-image: '../image/sprite-error@2x.png';
+$sp-img-error404-bg-2x: (858px, 0px, -858px, 0px, 774px, 134px, 1632px, 1010px, '../image/sprite-error@2x.png', 'sp-img-error404-bg@2x', );
+$spritesheet-width: 816px;
+$spritesheet-height: 505px;
+$spritesheet-image: '../image/sprite-error.png';
+$spritesheet-sprites: ($sp-img-404-man, $sp-img-404-num, $sp-img-error-man, $sp-img-error404-bg-layer-small, $sp-img-error404-bg-layer, $sp-img-error404-bg-small, $sp-img-error404-bg, );
+$spritesheet: (816px, 505px, '../image/sprite-error.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 1632px;
+$retina-spritesheet-height: 1010px;
+$retina-spritesheet-image: '../image/sprite-error@2x.png';
+$retina-spritesheet-sprites: ($sp-img-404-man-2x, $sp-img-404-num-2x, $sp-img-error-man-2x, $sp-img-error404-bg-layer-small-2x, $sp-img-error404-bg-layer-2x, $sp-img-error404-bg-small-2x, $sp-img-error404-bg-2x, );
+$retina-spritesheet: (1632px, 1010px, '../image/sprite-error@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$sp-img-404-man-group-name: 'sp-img-404-man';
+$sp-img-404-man-group: ('sp-img-404-man', $sp-img-404-man, $sp-img-404-man-2x, );
+$sp-img-404-num-group-name: 'sp-img-404-num';
+$sp-img-404-num-group: ('sp-img-404-num', $sp-img-404-num, $sp-img-404-num-2x, );
+$sp-img-error-man-group-name: 'sp-img-error-man';
+$sp-img-error-man-group: ('sp-img-error-man', $sp-img-error-man, $sp-img-error-man-2x, );
+$sp-img-error404-bg-layer-small-group-name: 'sp-img-error404-bg-layer-small';
+$sp-img-error404-bg-layer-small-group: ('sp-img-error404-bg-layer-small', $sp-img-error404-bg-layer-small, $sp-img-error404-bg-layer-small-2x, );
+$sp-img-error404-bg-layer-group-name: 'sp-img-error404-bg-layer';
+$sp-img-error404-bg-layer-group: ('sp-img-error404-bg-layer', $sp-img-error404-bg-layer, $sp-img-error404-bg-layer-2x, );
+$sp-img-error404-bg-small-group-name: 'sp-img-error404-bg-small';
+$sp-img-error404-bg-small-group: ('sp-img-error404-bg-small', $sp-img-error404-bg-small, $sp-img-error404-bg-small-2x, );
+$sp-img-error404-bg-group-name: 'sp-img-error404-bg';
+$sp-img-error404-bg-group: ('sp-img-error404-bg', $sp-img-error404-bg, $sp-img-error404-bg-2x, );
+$retina-groups: ($sp-img-404-man-group, $sp-img-404-num-group, $sp-img-error-man-group, $sp-img-error404-bg-layer-small-group, $sp-img-error404-bg-layer-group, $sp-img-error404-bg-small-group, $sp-img-error404-bg-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

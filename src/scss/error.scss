@@ -1,0 +1,146 @@
+///
+/// ADDITIONAL FILES
+///
+@import "./_mixin/mixin";
+@import "./_variable/variable";
+@import "./_variable/sprite-error";
+
+///
+/// MAIN FILES
+///
+@import "_template/_main/_fonts";
+@import "_template/_main/_grid";
+@import "_template/_main/_main";
+
+///
+/// MAIN STYLE
+///
+@import "_template/_body/_body";
+
+
+///
+/// MAIN STYLE
+///
+.board {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	@include mixinDimensions(90%);
+	padding: 15px;
+	border-radius: 2px;
+	@include mixinBoxShadow(z-depth-1);
+	background-color: rgba($c-white, 1);
+
+
+	&__title,
+	&__text {
+		color: $c-blueGrey800;
+		text-align: center;
+	}
+
+
+	&__title {
+		font: {
+			size: 42px;
+		}
+		margin-bottom: 15px;
+	}
+
+
+	&__text {
+		font-size: 20px;
+	}
+
+
+	&__image {
+		&-wrap {
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 150px;
+			margin: {
+				left: auto;
+				right: auto;
+			};
+			@include mixinDimensions(424px, 249px);
+
+
+			&_404-small {
+				bottom: 50px;
+				@include mixinDimensions(151px, 52px);
+			}
+		}
+
+
+		&_bg,
+		&_man,
+		&_layer {
+			position: absolute;
+			z-index: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+
+		&_man {
+			animation-delay: 0.25s;
+			animation-duration: 1.5s;
+			animation-fill-mode: both;
+			animation-name: slideInUp;
+		}
+
+
+		&_layer {
+			z-index: 5;
+		}
+
+
+		&_bg {
+			@include retina-sprite($sp-img-error404-bg-group);
+
+			.board__image-wrap_404-small & {
+				@include retina-sprite($sp-img-error404-bg-small-group);
+			}
+		}
+
+
+		&_man {
+			@include retina-sprite($sp-img-error-man-group);
+
+			.board__image-wrap_404 & {
+				@include retina-sprite($sp-img-404-man-group);
+			}
+
+			.board__image-wrap_404-small & {
+				@include retina-sprite($sp-img-404-num-group);
+			}
+		}
+
+
+		&_layer {
+			@include retina-sprite($sp-img-error404-bg-layer-group);
+
+			.board__image-wrap_404-small & {
+				@include retina-sprite($sp-img-error404-bg-layer-small-group);
+			}
+		}
+	}
+}
+
+
+@keyframes slideInUp {
+	from {
+		transform: translate3d(0, 145px, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}

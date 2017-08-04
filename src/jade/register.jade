@@ -1,0 +1,43 @@
+include _mixin/mixin
+include _mixin/macrosMixin
+
+-
+    const authUser = false;
+
+doctype html
+html(
+    lang="en"
+    class="js"
+    ng-app="Eportfolio"
+)
+
+    //- MAIN LINK ATTR
+    +headSite("Eportfolio | Register", linkSite.styleLinkMain, linkSite.styleLinkRegister, "")
+
+    -for(let i = 0; i < linkSite.scriptLinkCore.length; i++)
+        script(src= linkSite.scriptLinkCore[i])
+
+    +scriptBlockForAbgular()
+
+
+    body.background
+
+        .body_overlay
+
+        // HEADER
+        include _template/header/_header
+
+        // MENU
+        include _template/menu/menu
+
+        // MAIN
+        #main.main
+
+            include _template/register/register
+
+
+    //- MAIN SCRIPT ATTR
+    -for(let i = 0; i < linkSite.scriptLinkMain.length; i++)
+        script(src= linkSite.scriptLinkMain[i])
+    -for(let i = 0; i < linkSite.scriptLinkLogin.length; i++)
+        script(src= linkSite.scriptLinkRegister[i])

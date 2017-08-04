@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Eportfolio" class="js">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Eportfolio | Login</title>
+    <link rel="icon" type="image/png" href="./image/favicon.png"/>
+    <link href="./vendor/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./style/common.min.css" rel="stylesheet"/>
+    <link href="style/unlogged.min.css" rel="stylesheet"/>
+  </head>
+  <body class="background">
+    <div class="body_overlay"></div>
+    <!-- HEADER-->
+    <div id="header" class="header clearfix header__unlogged">
+      <!-- BTN MENU BURGER-->
+      <div class="btn-menu--wrap"><a href="javascript:void(0);" title="" class="btn-menu btn-menu_js "><span class="btn-menu__line btn-menu__line-0"></span><span class="btn-menu__line btn-menu__line-1"></span><span class="btn-menu__line btn-menu__line-2"></span></a>
+      </div>
+      <!--include logotype-->
+      <!--include profile-->
+      <!-- LANGUAGE-->
+      <div id="language" class="language language_en"><a href="javascript:void(0);" title="" class="language__link language__btn language-js"><i class="language__btn-flag"></i><i class="language__btn-corner fa fa-caret-down"></i></a>
+        <div class="language__drop">
+          <div class="language__drop-wrap">
+            <p class="language__title">Choose language:</p><a href="javascript:void(0);" title="" class="language__btn"><i class="language__btn-flag language__btn-flag_en"></i>English</a><a href="javascript:void(0);" title="" class="language__btn"><i class="language__btn-flag language__btn-flag_nl"></i>Nederlands</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MENU-->
+    <!-- LANGUAGE-->
+    <div id="menu" class="menu">
+      <div class="menu__top"></div>
+      <div class="menu__center"><a href="/about" title="" class="menu__btn"><i class="menu__btn-icon fa fa-info-circle"></i>About</a><a href="javascript:void(0);" title="" class="menu__btn"><i class="menu__btn-icon fa fa-address-book"></i>Contacts</a><a href="/privacy" title="" class="menu__btn"><i class="menu__btn-icon fa fa-user-secret"></i>Privacy</a>
+      </div>
+      <div class="menu__bottom">
+        <p class="menu__copyright">© ExpertCollege 2017</p>
+        <div class="menu__social-wrap"><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-facebook"></i></a><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-google-plus"></i></a><a href="javascript:void(0);" title="" class="menu__social"><i class="menu__social-icon fa fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- MAIN-->
+    <div id="main" class="main">
+      <div ng-controller="loginCtrl" class="container-fluid">
+        <!-- LOGIN TMPL-->
+        <!-- ========================================-->
+        <div class="login animated"><img src="./image/logotype.png" title="" alt="" class="logotype logotype_unlogged">
+          <div class="shape shape_login">
+            <div class="shape__badge">
+              <p class="shape__badge-title">User Login</p><i class="shape__badge-corner"></i>
+            </div>
+            <form action="" class="forms">
+              <!-- 3 class add - [error, warning, done]-->
+              <div class="form__group form__group_icon">
+                <div class="form__field">
+                  <input type="email" name="email" id="email__address" placeholder="Your Email address" class="form__input"/><i class="form__icon fa fa-envelope"></i>
+                </div>
+              </div>
+              <div class="form__group form__group_icon form__group_link">
+                <div class="form__field">
+                  <input type="password" name="password" id="password" placeholder="Your Password" class="form__input"/><i class="form__icon fa fa-unlock-alt"></i><a href="javascript:void(0);" title="Forgot password?" class="form__link btn__forgot-js">Forgot password?</a>
+                </div>
+              </div>
+            </form>
+            <div class="shape__btn-wrap shape__btn-wrap_full">
+              <button type="button" class="shape__btn shape__btn_success">Sign In</button>
+            </div>
+          </div>
+          <div class="shape__link-wrap">
+            <p class="shape__link">Don’t have an account? <a href="/register" title="" class="shape__link-btn shape__signUp-js">Sign Up</a>
+            </p>
+          </div>
+        </div>
+        <!-- FORGOT TMPL-->
+        <!-- ========================================-->
+        <div class="forgot animated"><img src="./image/logotype.png" title="" alt="" class="logotype logotype_unlogged">
+          <div class="shape shape_forgot">
+            <div class="shape__badge">
+              <p class="shape__badge-title">Forgot Password</p><i class="shape__badge-corner"></i>
+            </div>
+            <form class="forms">
+              <div class="form__group form__group_icon">
+                <div class="form__field">
+                  <input type="email" name="email" id="email__address" placeholder="Your Email address" class="form__input"/><i class="form__icon fa fa-envelope"></i>
+                </div>
+              </div>
+            </form>
+            <div class="shape__btn-wrap shape__btn-wrap_full">
+              <button type="button" class="shape__btn shape__btn_success">Reset my Password</button>
+            </div>
+          </div>
+          <div class="shape__link-wrap">
+            <p class="shape__link">Just remembered? <a href="javascript:void(0);" title="" class="shape__link-btn btn__goToLogin-js">Sign In</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script/main.min.js"></script>
+  <script src="./script/login.min.js"></script>
+</html>

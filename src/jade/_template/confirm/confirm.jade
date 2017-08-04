@@ -1,0 +1,71 @@
+.container-fluid(
+    ng-controller="confirmCtrl"
+)
+    // CONFIRM TMPL
+    // ========================================
+    img(
+        src="./image/logotype.png"
+        title=""
+        alt=""
+        class="logotype logotype_unlogged"
+    )
+
+    .shape.shape_register
+
+        +shapeBadge("Registration Confirmation")
+
+        form.forms()
+            p.shape__title!= "<strong>Dear,</strong> Name Surname TitleName"
+
+            hr.shape__line
+
+            .form__group.form__group_icon
+                label.form__label(for!= "email")!= "Please confirm email:"
+                .form__field
+                    input(
+                        class="form__input"
+                        type!= "email"
+                        name!= "email"
+                        id!= "email"
+                        placeholder!= ""
+                        disabled
+                        value="test.test@test.test"
+                    )
+                    i.form__icon(class="fa fa-envelope")
+
+            hr.shape__line
+
+            .form__group.form__group_checkbox
+                input(
+                    class="form__checkbox"
+                    type="checkbox"
+                    name="checkbox0"
+                    id="checkbox0"
+                )
+                label(for="checkbox0")
+                    i.form__checkbox-icon
+                    span.form__checkbox-text!= "I hereby declare to have read and accept <a href='javascript:void(0);' class='form__checkbox-link'>the general conditions and terms</a> for using My Expertfolio"
+
+            .form__group.form__group_checkbox
+                input(
+                    class="form__checkbox"
+                    type="checkbox"
+                    name="checkbox1"
+                    id="checkbox1"
+                )
+                label(for="checkbox1")
+                    i.form__checkbox-icon
+                    span.form__checkbox-text!= "I hereby declare to have read and to accept the <a href='javascript:void(0);' class='form__checkbox-link'>patient privacy rules</a> of Expertfolio"
+
+
+        .shape__btn-wrap.shape__btn-wrap_two
+            button(
+                type="button"
+                class="shape__btn shape__btn_danger"
+            )!= "Cancel Registration"
+            button(
+                type="button"
+                class="shape__btn shape__btn_success"
+            )!= "Confirm Registration"
+
+    +shapeAdditionalLink("Just remembered? ", "/login", "shape__signIn-js" , "Sign In")

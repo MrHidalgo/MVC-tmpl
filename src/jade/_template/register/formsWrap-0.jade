@@ -1,0 +1,42 @@
+
+.forms__wrap.forms__wrap-0
+
+    .form__group.form__group_register()
+        label.form__label(for!= "name")!= "Name: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "name"
+                id!= "name"
+                placeholder!= "Your name"
+            )
+
+    .form__group.form__group_register()
+        label.form__label(for!= "middle_name")!= "Middle name: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "middle_name"
+                id!= "middle_name"
+                placeholder!= "Your middle name"
+            )
+
+    .form__group.form__group_register()
+        label.form__label(for!= "surname")!= "Surname: <span class='form__label-star'>*</span>"
+        .form__field
+            input(
+                class="form__input"
+                type!= "text"
+                name!= "surname"
+                id!= "surname"
+                placeholder!= "Your surname"
+            )
+
+    .form__group.form__group_register
+        label.form__label()!= ""
+        .form__field
+            select(kendo-drop-down-list)
+                -for(var i = 0; i > 10; i++)
+                    option!= i

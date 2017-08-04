@@ -1,0 +1,33 @@
+include _mixin/mixin
+include _mixin/macrosMixin
+
+include _template/error404/boardMixin
+
+doctype html
+html(
+    lang="en"
+    class="js"
+)
+
+    //- MAIN LINK ATTR
+    +headSite("Eportfolio | 404", "", linkSite.styleLink404, "")
+
+
+    body.background.background_404
+
+
+        .board
+
+            +boardTitleText(
+                error404["404"].title,
+                error404["404"].text
+            )
+
+            +boardImageContainer("board__image-wrap_404")
+
+            +boardImageContainer("board__image-wrap_404-small")
+
+
+    //- MAIN SCRIPT ATTR
+    //- for(var i = 0; i < linkSite.scriptLink404.length; i++)
+    //    script(src= linkSite.scriptLink404[i])

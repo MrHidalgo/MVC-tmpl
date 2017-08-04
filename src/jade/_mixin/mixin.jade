@@ -1,0 +1,47 @@
+//- HEAD
+mixin headSite(titleName, styleFileMain, styleFileAdditional, arrFontName)
+    head
+        //- META TAGS
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+
+        //- TITLE
+        title!= titleName
+
+        //- FAVICON
+        link(rel="icon" type="image/png" href="./image/favicon.png")
+
+        //- LINK CSS MAIN
+        - for(var i = 0, styleFileLength = styleFileMain.length; i < styleFileLength; i++)
+            link(href= styleFileMain[i], rel="stylesheet")
+
+        //- LINK CSS ADDITIONAL
+        - for(var j = 0, styleFileLength = styleFileAdditional.length; j < styleFileLength; j++)
+            link(href= styleFileAdditional[j], rel="stylesheet")
+
+        //- LINK FONTS
+        - for(var k = 0, arrFontNameLength = arrFontName.length; k < arrFontNameLength; k++)
+            link(href= arrFontName[k], rel='stylesheet')
+
+
+//- BTN MENU BURGER
+mixin btnMenuBurger(className)
+    a(
+        href="javascript:void(0);"
+        title=""
+        class="btn-menu btn-menu_js " + className
+    )
+        span.btn-menu__line.btn-menu__line-0
+        span.btn-menu__line.btn-menu__line-1
+        span.btn-menu__line.btn-menu__line-2
+
+//- MAIN CORE SCRIPT
+mixin scriptBlockForAbgular()
+    -
+        var globalSettings = {appName: 'Eportfolio'};
+        var HelpDesk = angular.module(globalSettings.appName, ['Eportfolio.Controllers','kendo.directives']);
+        HelpDesk.factory('httpResponseInterceptor', ['$q', '$location', function ($q) {return {request: function (config) {config.headers = config.headers || {};return config;},response: function (response) {return response || $q.when(response);},responseError: function (rejection) {return $q.reject(rejection);}}}]);
+        HelpDesk.config(['$httpProvider', function ($httpProvider) {$httpProvider.interceptors.push('httpResponseInterceptor');}]);
+        angular.module('Eportfolio.Controllers', []);
+        angular.module(globalSettings.modulesAreas, []);
